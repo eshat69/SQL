@@ -327,3 +327,80 @@ body {
     background-color: #34495e;
   }
 }
+--------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Animation</title>
+    <style>
+        body {
+            background: #131b21;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            text-align: center;
+            color: white;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .flower {
+            animation: bloom 5s infinite alternate ease-in-out;
+            transform-origin: center;
+        }
+
+        @keyframes bloom {
+            0% {
+                transform: scale(0.8);
+                opacity: 0.8;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .sorry-text {
+            margin-top: 20px;
+            font-size: 48px;
+            font-weight: bold;
+            color: #e74c3c;
+            animation: fadeInMoveUp 3s ease-out 1s forwards;
+        }
+
+        @keyframes fadeInMoveUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <!-- Outer petals -->
+        <circle cx="100" cy="30" r="40" fill="red" class="flower"/>
+        <circle cx="100" cy="170" r="40" fill="red" class="flower"/>
+        <circle cx="30" cy="100" r="40" fill="red" class="flower"/>
+        <circle cx="170" cy="100" r="40" fill="red" class="flower"/>
+        <!-- Inner petals -->
+        <circle cx="100" cy="80" r="30" fill="darkred" class="flower"/>
+        <circle cx="100" cy="120" r="30" fill="darkred" class="flower"/>
+        <circle cx="50" cy="100" r="30" fill="darkred" class="flower"/>
+        <circle cx="150" cy="100" r="30" fill="darkred" class="flower"/>
+        <!-- Center of the flower -->
+        <circle cx="100" cy="100" r="20" fill="yellow"/>
+    </svg>
+    <div class="sorry-text">Sorry</div>
+</body>
+</html>
+---------------------------------
